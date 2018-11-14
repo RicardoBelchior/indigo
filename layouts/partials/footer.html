@@ -43,6 +43,11 @@
       {{ end }}
     </div>
 
+    <!-- Include GoogleAnalytics, if tracking code is provided -->
+    {{ if .Site.GoogleAnalytics }}
+      {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}
+
 <!-- Close the body/html document -->
 </body>
 </html>
